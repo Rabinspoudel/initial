@@ -32,4 +32,4 @@ def contact(request):
     {
     "sdasdasdasdasddas contact us "
     }
-    return render(request,template_name="about.html",content_type={})
+    return render(request,template_name="contact.html",content_type={})
