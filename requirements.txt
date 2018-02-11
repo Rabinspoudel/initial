@@ -1,0 +1,5 @@
+Django==1.11
+poo==1.0.0
+PyMySQL==0.8.0
+pytz==2017.3
+virtualenv==15.1.0
