@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>thihs is index page</title>
-</head>
-<body>
-{{ date }}
-{{ value }}
-</body>
-</html>
+{% extends 'base.html' %}
+{% block titleBlock%}
+Index | {{block.super}}
+{%endblock titleBlock%}
+
+
+
+{% block bodyBlock %}
+    <marquee>This is index page</marquee>
+    <h1>This is index page</h1>
+
+    <p>
+    this is the index  page
+    </p>
+{% endblock %}

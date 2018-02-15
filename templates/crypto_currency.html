@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block bodyBlock %}
+    <table>
+        <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Price in $</th>
+            <th>Symbol</th>
+        </tr>
+        </thead>
+                <tbody>
+    {% for d in data %}
+        <tr>
+
+       <td> {{d.rank}}</td>
+        <td>{{ d.name }}</td>
+        <td>{{ d.price_usd }}</td>
+
+        <td>{{ d.symbol }}</td>
+
+       </tr>
+    {% endfor %}
+
+            </tbody>
+
+
+
+
+    </table>
+
+
+
+
+
+
+{% endblock bodyBlock %}

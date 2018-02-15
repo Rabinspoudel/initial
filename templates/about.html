@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>this is about page</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block titleBlock%}
+About | {{block.super}}
+{%endblock titleBlock%}
+
+{% block bodyBlock %}
+
+     <marquee>This is home page</marquee>
+
+    <h1>This is about page</h1>
+{% endblock %}

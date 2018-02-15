@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from blog.views import index,home,about,contact
-
+from crypto.views import get_crypto
 urlpatterns = [
 
 
@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'about/',about),
     url(r'contact/',contact),
 
+    url(r'^crypto/',get_crypto,name="crypto" ),
     url(r'^admin/', admin.site.urls),
 ]

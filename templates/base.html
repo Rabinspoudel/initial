@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block titleBlock %}
+        Gustavo.com
+        {%endblock titleBlock %}
+
+    </title>
+    {% include 'snippets/css.html' %}
+    {% include 'snippets/js.html' %}
+</head>
+<body>
+{% include 'snippets/nav.html' %}
+
+<img src ="{% static 'DSC_0027.JPG' %}" alt="altersss " width="30" height="50" />
+<div class="row">
+<div class="container">
+    {% block bodyBlock %}
+
+    {% endblock bodyBlock %}
+</div>
+</div>
+</body>
+</html>

@@ -1,21 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>this is home page</title>
-</head>
-{% include 'snippets/css.html' %}
-    {% include 'snippets/js.html' %}
-<body>
-<p>
-    {{ dat }}
+{% extends 'base.html' %}
 
+{% block titleBlock%}
+    Home | {{block.super}}
+{%endblock titleBlock%}
 
+{% block bodyBlock %}
 
-    </p>
-    <p>
-    hello my name is gustavo
-</p>
+    <marquee>This is Home page</marquee>
 
-</body>
-</html>
+    <h1>This is home page</h1>
+
+    <div class="con-8">
+        <div class="post" >
+            {% for f in obj %}
+                <h3>{{f.title }}</h3>
+                <small>{{ f.created_date }}</small>
+                <p>{{ f.content }}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    {#    <div class="col-4" >#}
+    {#    <h3>Latest post</h3>#}
+    {#    <ul>#}
+    {#        <li><a href="#">#}
+    {#            Title </a>#}
+    {#    </li>#}
+    {#        <li><a href="#"> title1</a></li>#}
+    {#<li><a href="#">title2</a></li>#}
+    {#        </ul>#}
+    {#    </div>#}
+{% endblock %}
