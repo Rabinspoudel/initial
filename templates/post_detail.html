@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titleBlock%}
+Blogpost | {{block.super}}
+{%endblock titleBlock%}
+
+{% block bodyBlock %}
+
+     <marquee>blog post </marquee>
+
+
+    Author:{{ one_post.author }}<br>
+    Title:{{ one_post.title }}<br>
+    Content:{{ one_post.content }}<br>
+    Created_date:{{ one_post.created_date }}<br>
+    <hr>
+
+
+
+
+{% endblock %}

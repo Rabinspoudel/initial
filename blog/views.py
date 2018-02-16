@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 
 from django.http import  HttpResponse
 from django.shortcuts import render
@@ -18,6 +18,15 @@ def home(request):
         "obj":object_list
     }
     return render(request,"home.html",context=ctx)
+
+
+def get_one_post(request,*args,**kwargs):
+    arg=kwargs.get('pk')
+    one_post = get_object_or_404(Post, pk = arg)
+    ctx={
+    "one_post" : one_post
+    }
+    return render(request,'post_detail.html',context=ctx)
 
 def about(request):
     {

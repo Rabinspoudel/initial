@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block bodyBlock %}
-    <table>
+    <table class="table table-bordered table-hover table-sm ">
         <thead>
         <tr>
             <th>Rank</th>
@@ -11,7 +11,13 @@
         </thead>
                 <tbody>
     {% for d in data %}
-        <tr>
+        <tr class =
+                "{% if d.percent_change_24h.0 == "-" %}
+{#                dot pachi ko 0 bhaneko zeroth index ko value bhanna khojeko ho #}
+        text-danger
+        {% else %}
+        text-success
+        {% endif %} "}>
 
        <td> {{d.rank}}</td>
         <td>{{ d.name }}</td>

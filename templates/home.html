@@ -13,7 +13,7 @@
     <div class="con-8">
         <div class="post" >
             {% for f in obj %}
-                <h3>{{f.title }}</h3>
+                <h3><a href="{% url 'detail' pk=f.pk %}" >{{f.title }}</a></h3>
                 <small>{{ f.created_date }}</small>
                 <p>{{ f.content }}</p>
             {% endfor %}
